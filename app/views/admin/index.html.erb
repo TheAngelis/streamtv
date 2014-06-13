@@ -1,0 +1,52 @@
+<div class="row-fluid">
+
+<div class="span2">
+<ul class="nav nav-pills nav-stacked">
+  <li class="nav-header">Admin Menu</li>
+  <li class="active"><a href="#">User Manager List</a></li>
+  <li><a href="#">Set Embeded Video</a></li>
+
+</ul>
+</div>
+
+
+
+<div class="span9 offset1">
+
+<table class="table row table-striped table-hover">
+              <thead>
+                <tr>
+                  <th class="span1">ID</th>
+                  <th class="span2">Name</th>
+                  <th class="span3">Email</th>
+                  <th class="span2">Gender</th>
+                  <th class="span1">Logged</th>
+                  <th class="span1">Edit</th>
+                  <th class="span1">Delete</th>
+                  <th class="span1">Admin</th>
+
+                </tr>
+              </thead>
+              <tbody>
+
+<% @users = User.all %>
+<% @users.each do |user| %>
+  <tr>
+                  <td><%= user.id %></td>
+                  <td><%= user.name %></td>
+                  <td><%= user.email %></td>
+                  <td><%= user.gender %></td>
+                  <td><%= user.sign_in_count %></td>
+                  <td><%= link_to "Show", "/users/#{user.id}" %></td>
+                  <td> <%= link_to "Edit", root_path %></td>
+                  <td><% if user.admin? %>
+                            <i class="icon-check"></i>
+                          <% end %></td>
+
+
+                </tr>
+<% end %>
+              </tbody>
+            </table>
+          </div>
+        </div>

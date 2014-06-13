@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Streamsite</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+  <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+  <script src="http://code.jquery.com/jquery.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+
+    <style type="text/css">
+      body {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        background-color: #FcFcFc;
+      }
+
+      #beta {
+        margin: 10px;
+               }
+      .titlevideo{
+        color: #00adef;
+
+               }
+
+
+      .emailsignin{
+        color: #121212;
+
+               }
+      .bgdark{
+        background-color: #222;
+        margin-left: -55px;
+        margin-right: -55px;
+        padding-left: 50px;
+        padding-top: 25px;
+        padding-bottom: 25px;
+
+        color: #CCCCCC;
+               }
+      .form-signin {
+        max-width: 300px;
+        padding: 19px 29px 29px;
+        margin: 0 auto 20px;
+        background-color: #fff;
+        border: 1px solid #e5e5e5;
+        -webkit-border-radius: 5px;
+           -moz-border-radius: 5px;
+                border-radius: 5px;
+        -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+           -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+                box-shadow: 0 1px 2px rgba(0,0,0,.05);
+      }
+      .form-signin .form-signin-heading,
+      .form-signin .checkbox {
+        margin-bottom: 10px;
+      }
+      .form-signin input[type="text"],
+      .form-signin input[type="password"] {
+        font-size: 16px;
+        height: 20px;
+        margin-bottom: 15px;
+        padding: 7px 9px;
+      }
+  .user-show-admin {
+          max-width: 600px;
+          padding: 19px 29px 29px;
+          margin: 0 auto 20px;
+          background-color: #fff;
+          border: 1px solid #e5e5e5;
+          -webkit-border-radius: 5px;
+             -moz-border-radius: 5px;
+                  border-radius: 5px;
+          -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+             -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+                  box-shadow: 0 1px 2px rgba(0,0,0,.05);
+        }
+
+    </style>
+</head>
+<body>
+  <div class="container">
+    <div class="masthead">
+      <ul class="nav nav-pills pull-right">
+
+        <% if user_signed_in? %>
+
+          <!-- EMAIL -->
+          <li><a class="emailsignin"><strong><%= current_user.email %></strong></a> </li>
+
+          <!-- ADMIN -->
+          <% if current_user.admin? %>
+               <li <% if current_page?(admin_index_path) %>class="active"<% end %>><%= link_to "Admin", admin_index_path %></li>
+          <% end %>
+
+          <!-- DASHBOARD -->
+          <li <% if current_page?(dashboard_index_path) %>class="active"<% end %>><%= link_to "Dashboard", root_path %></li>
+
+          <!-- MY ACCOUNT -->
+          <li  <% if current_page?(edit_user_registration_path) %>class="active"<% end %>><%= link_to "My Account", edit_user_registration_path %></li>
+
+          <!-- SIGN OUT -->
+          <li> <%= link_to "Sign out", destroy_user_session_path, :method => :delete %></li>
+
+
+        <% else %>
+          <li class="active"><%= link_to "Home", root_path %></li>
+          <li><%= link_to "Register", new_user_registration_path %></li>
+          <li><%= link_to "Sign in", new_user_session_path %></li>
+        <% end %>
+      </ul>
+      <h1> <%= link_to "Streaming TV", root_path, { :class=>"titlevideo" } %></h1>
+    </div>
+    <hr>
+  </div>
+
+
+  <div class="container">
+    <% flash.each do |name, msg| %>
+      <div class="alert alert-info">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+
+        <%= content_tag :div, msg, :id => "flash_#{name}" %>
+      </div>
+    <% end %>
+
+
+    <%= yield %>
+
+  </div>
+  <hr>
+</body>
+</html>

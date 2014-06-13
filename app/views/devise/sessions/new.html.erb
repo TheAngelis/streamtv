@@ -1,0 +1,27 @@
+<div class="container">
+
+
+      <%= form_for(resource, as: resource_name, url: session_path(resource_name), :html => {:class => "form-signin"}) do |f| %>
+
+    <h2>Sign in</h2>
+        <div><%= f.label :email %>
+        <%= f.email_field :email, autofocus: true, :class => "input-block-level" %></div>
+
+  <div><%= f.label :password %>
+    <%= f.password_field :password, autocomplete: "off",  :class => "input-block-level"  %></div>
+
+  <% if devise_mapping.rememberable? -%>
+    <div><label class="checkbox"><%= f.check_box :remember_me %> Remember Me</label></div>
+  <% end -%>
+
+  <br>
+<div><%= f.submit "Sign in", { :class=>"btn btn-large btn-primary" } %></div>
+<br>
+<%= render "users/shared/links" %>
+
+<% end %>
+
+
+</div>
+
+
