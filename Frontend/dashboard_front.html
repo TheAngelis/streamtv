@@ -1,0 +1,197 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Streamsite</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link data-turbolinks-track="true" href="/assets/admin.css?body=1" media="all" rel="stylesheet" />
+<link data-turbolinks-track="true" href="/assets/bootstrap_and_overrides.css?body=1" media="all" rel="stylesheet" />
+<link data-turbolinks-track="true" href="/assets/dashboard.css?body=1" media="all" rel="stylesheet" />
+<link data-turbolinks-track="true" href="/assets/home.css?body=1" media="all" rel="stylesheet" />
+<link data-turbolinks-track="true" href="/assets/users.css?body=1" media="all" rel="stylesheet" />
+<link data-turbolinks-track="true" href="/assets/application.css?body=1" media="all" rel="stylesheet" />
+  <script data-turbolinks-track="true" src="/assets/jquery.js?body=1"></script>
+<script data-turbolinks-track="true" src="/assets/jquery_ujs.js?body=1"></script>
+<script data-turbolinks-track="true" src="/assets/twitter/bootstrap/bootstrap-transition.js?body=1"></script>
+<script data-turbolinks-track="true" src="/assets/twitter/bootstrap/bootstrap-alert.js?body=1"></script>
+<script data-turbolinks-track="true" src="/assets/twitter/bootstrap/bootstrap-modal.js?body=1"></script>
+<script data-turbolinks-track="true" src="/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1"></script>
+<script data-turbolinks-track="true" src="/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1"></script>
+<script data-turbolinks-track="true" src="/assets/twitter/bootstrap/bootstrap-tab.js?body=1"></script>
+<script data-turbolinks-track="true" src="/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1"></script>
+<script data-turbolinks-track="true" src="/assets/twitter/bootstrap/bootstrap-popover.js?body=1"></script>
+<script data-turbolinks-track="true" src="/assets/twitter/bootstrap/bootstrap-button.js?body=1"></script>
+<script data-turbolinks-track="true" src="/assets/twitter/bootstrap/bootstrap-collapse.js?body=1"></script>
+<script data-turbolinks-track="true" src="/assets/twitter/bootstrap/bootstrap-carousel.js?body=1"></script>
+<script data-turbolinks-track="true" src="/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1"></script>
+<script data-turbolinks-track="true" src="/assets/twitter/bootstrap/bootstrap-affix.js?body=1"></script>
+<script data-turbolinks-track="true" src="/assets/twitter/bootstrap.js?body=1"></script>
+<script data-turbolinks-track="true" src="/assets/turbolinks.js?body=1"></script>
+<script data-turbolinks-track="true" src="/assets/admin.js?body=1"></script>
+<script data-turbolinks-track="true" src="/assets/bootstrap.js?body=1"></script>
+<script data-turbolinks-track="true" src="/assets/dashboard.js?body=1"></script>
+<script data-turbolinks-track="true" src="/assets/home.js?body=1"></script>
+<script data-turbolinks-track="true" src="/assets/users.js?body=1"></script>
+<script data-turbolinks-track="true" src="/assets/application.js?body=1"></script>
+  <meta content="authenticity_token" name="csrf-param" />
+<meta content="ZgPnVvo6iEfUmBqDC7M8hTLpkwyi7ccBDMVyrizMs4g=" name="csrf-token" />
+  <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+  <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+  <script src="http://code.jquery.com/jquery.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+
+    <style type="text/css">
+      body {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        background-color: #FcFcFc;
+      }
+
+      #beta {
+        margin: 10px;
+               }
+      .titlevideo{
+        color: #00adef;
+
+               }
+
+
+      .emailsignin{
+        color: #121212;
+
+               }
+      .bgdark{
+        background-color: #222;
+        margin-left: -55px;
+        margin-right: -55px;
+        padding-left: 50px;
+        padding-top: 25px;
+        padding-bottom: 25px;
+
+        color: #CCCCCC;
+               }
+      .form-signin {
+        max-width: 300px;
+        padding: 19px 29px 29px;
+        margin: 0 auto 20px;
+        background-color: #fff;
+        border: 1px solid #e5e5e5;
+        -webkit-border-radius: 5px;
+           -moz-border-radius: 5px;
+                border-radius: 5px;
+        -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+           -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+                box-shadow: 0 1px 2px rgba(0,0,0,.05);
+      }
+      .form-signin .form-signin-heading,
+      .form-signin .checkbox {
+        margin-bottom: 10px;
+      }
+      .form-signin input[type="text"],
+      .form-signin input[type="password"] {
+        font-size: 16px;
+        height: 20px;
+        margin-bottom: 15px;
+        padding: 7px 9px;
+      }
+  .user-show-admin {
+          max-width: 600px;
+          padding: 19px 29px 29px;
+          margin: 0 auto 20px;
+          background-color: #fff;
+          border: 1px solid #e5e5e5;
+          -webkit-border-radius: 5px;
+             -moz-border-radius: 5px;
+                  border-radius: 5px;
+          -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+             -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+                  box-shadow: 0 1px 2px rgba(0,0,0,.05);
+        }
+
+    </style>
+</head>
+<body>
+  <div class="container">
+    <div class="masthead">
+      <ul class="nav nav-pills pull-right">
+
+
+          <!-- EMAIL -->
+          <li><a class="emailsignin"><strong>de4ngelis@gmail.com</strong></a> </li>
+
+          <!-- ADMIN -->
+               <li ><a href="/admin">Admin</a></li>
+
+          <!-- DASHBOARD -->
+          <li class="active"><a href="/">Dashboard</a></li>
+
+          <!-- MY ACCOUNT -->
+          <li  ><a href="/users/edit">My Account</a></li>
+
+          <!-- SIGN OUT -->
+          <li> <a data-method="delete" href="/users/sign_out" rel="nofollow">Sign out</a></li>
+
+
+      </ul>
+      <h1> <a class="titlevideo" href="/">Streaming TV</a></h1>
+    </div>
+    <hr>
+  </div>
+
+
+  <div class="container">
+
+
+    <div class="text-left">
+  <p class="lead"><strong>Welcome back!</strong> You've been here 29 times. </p>
+</div>
+
+<div class="container-fluid bgdark">
+  <div class="row-fluid">
+    <div class="span8">
+
+<iframe src="http://cdnapi.kaltura.com/p/1496311/sp/149631100/embedIframeJs/uiconf_id/24700121/partner_id/1496311?iframeembed=true&playerId=kaltura_player_1402683787&entry_id=1_cm2wujfc&flashvars[streamerType]=auto" width="720" height="405" allowfullscreen webkitallowfullscreen mozAllowFullScreen frameborder="0" style="width: 720px; height: 405px;" itemprop="video" itemscope itemtype="http://schema.org/VideoObject">
+<span itemprop="name" content="Mondelez - HDS-HLS-DASH - WEB"></span>
+<span itemprop="description" content=""></span>
+<span itemprop="duration" content="0"></span>
+<span itemprop="thumbnail" content="http://cdnbakmi.kaltura.com/p/1496311/sp/149631100/thumbnail/entry_id/1_cm2wujfc/version/0/acv/11"></span>
+<span itemprop="width" content="720"></span>
+<span itemprop="height" content="405"></span>
+</iframe>
+
+    </div>
+    <div class="span4">
+      <!--Body content-->
+      <h3 class="titlevideo">Adidas Futebol</h3>
+      <p>
+        Video curta da Nike, produzido pela Passion Picture, mostra a historia de jogares sendo trocados por
+        clones perfeitos. Os principais jogadores do mundo acabam tendo que se virar trabalhando em outras áreas,
+        o que faz do video engraçado. Até que Ronaldo Fenomeno decide mudar isso convocando os jogadores para uma partida do século..
+      </p>
+      <p>
+        <h5>Assita ao lado!</h5>
+      </p>
+
+      <br />
+
+      <p>
+        <strong>Client:</strong> Nike<br />
+        <strong>VFX Prodution:</strong> Passion Picture <br />
+        <strong>Year:</strong> 2014
+      </p>
+
+    </div>
+
+
+  </div>
+</div>
+
+
+
+
+
+  </div>
+  <hr>
+</body>
+</html>
+
