@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
 
-  #get 'users/index'
+  get "admin/videos"
   resources :admin
   devise_for :users
   resources :dashboard
+  resources :videos
   root to: "home#index"
 
   match '/users/:id',     to: 'users#show',       via: [:get, :post]

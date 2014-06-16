@@ -16,6 +16,9 @@ end
 
   end
 
+  def videos
+
+  end
 #  def show
 
 #  if current_user.admin?

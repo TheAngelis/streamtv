@@ -1,0 +1,27 @@
+<div class="row-fluid">
+
+<div class="span2">
+<ul class="nav nav-pills nav-stacked">
+  <li class="nav-header">Admin Menu</li>
+  <li <% if current_page?(admin_index_path) %>class="active"<% end %>><%= link_to "User Manager List", admin_index_path %></li>
+   <li <% if current_page?(admin_videos_path) %>class="active"<% end %>><%= link_to "Set Embeded Video", admin_videos_path %></li>
+
+</ul>
+</div>
+
+
+
+<div class="span9 offset1">
+
+
+<div class="text-center">
+  <h3>Videos</h3>
+</div>
+
+
+
+              </tbody>
+            </table>
+          </div>
+        </div>
+
