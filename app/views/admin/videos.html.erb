@@ -14,10 +14,23 @@
 <div class="span9 offset1">
 
 
-<div class="text-center">
-  <h3>Videos</h3>
+<div class="text-left">
+  <h3>Video Settings</h3>
 </div>
+This video will be embeded on dashboard page. Click on edit botton to change your code.
+<hr>
 
+<%= @video.code.html_safe %> <br />
+<P>
+  <h4><%= @video.name %></h4>
+</P>
+    <p>
+
+    <blockquote><%= @video.description %></blockquote>
+
+    </p>  <br />
+
+      <%= link_to "Edit Embed Video", "/admin/video_edit/#{@video.id}", { :class=>"btn btn-info btn-large" } %>
 
 
               </tbody>

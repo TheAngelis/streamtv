@@ -17,14 +17,16 @@ end
   end
 
   def videos
+     @video = Video.find(1)
+  end
+
+  def video_edit
+      @video = Video.find(params[:id])
 
   end
-#  def show
 
-#  if current_user.admin?
-   #     redirect_to :controller=>'users', :action => 'show'
-   # end
-  #end
+
+
 
 
 end

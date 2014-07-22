@@ -10,23 +10,15 @@
   <div class="row-fluid">
     <div class="span8">
 
-<iframe src="http://cdnapi.kaltura.com/p/1496311/sp/149631100/embedIframeJs/uiconf_id/24700121/partner_id/1496311?iframeembed=true&playerId=kaltura_player_1402683787&entry_id=1_cm2wujfc&flashvars[streamerType]=auto" width="720" height="405" allowfullscreen webkitallowfullscreen mozAllowFullScreen frameborder="0" style="width: 720px; height: 405px;" itemprop="video" itemscope itemtype="http://schema.org/VideoObject">
-<span itemprop="name" content="Mondelez - HDS-HLS-DASH - WEB"></span>
-<span itemprop="description" content=""></span>
-<span itemprop="duration" content="0"></span>
-<span itemprop="thumbnail" content="http://cdnbakmi.kaltura.com/p/1496311/sp/149631100/thumbnail/entry_id/1_cm2wujfc/version/0/acv/11"></span>
-<span itemprop="width" content="720"></span>
-<span itemprop="height" content="405"></span>
-</iframe>
+      <%= @video.code.html_safe  %>
 
     </div>
     <div class="span4">
       <!--Body content-->
-      <h3 class="titlevideo">Adidas Futebol</h3>
+      <h3 class="titlevideo"><%= @video.name  %>
+</h3>
       <p>
-        Video curta da Nike, produzido pela Passion Picture, mostra a historia de jogares sendo trocados por
-        clones perfeitos. Os principais jogadores do mundo acabam tendo que se virar trabalhando em outras áreas,
-        o que faz do video engraçado. Até que Ronaldo Fenomeno decide mudar isso convocando os jogadores para uma partida do século..
+         <%= @video.description  %>
       </p>
       <p>
         <h5>Assita ao lado!</h5>

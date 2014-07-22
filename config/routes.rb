@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   get "admin/videos"
+  match '/admin/video_edit/:id',     to: 'admin#video_edit',       via: [:get, :post]
   resources :admin
   devise_for :users
   resources :dashboard
@@ -8,6 +9,17 @@ Rails.application.routes.draw do
   root to: "home#index"
 
   match '/users/:id',     to: 'users#show',       via: [:get, :post]
+
+
+
+
+
+
+
+
+
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
