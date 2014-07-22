@@ -1,0 +1,252 @@
+/* Style.css */
+
+
+html {
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizelegibility;
+}
+
+nav {
+	margin-top: 0px;
+	text-align: center;
+}
+
+.navbar-brand img {
+    width:110px;
+}
+
+.navbar-nav {
+    font-size: 2em;
+
+}
+.navbar-default .navbar-nav > li > a {
+    color: #4f2170;
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+    color: #4f2170;
+    background-color: #e3d9f5;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-size: 62.5%;
+}
+
+
+#sizer { 
+    position: fixed; 
+    top: 60px;
+    right: -5px; 
+    width: 100px;
+    height: 80px;
+    padding-top: 10px;
+    padding-left: 3px;
+    background: rgba(255,0,0,0.5);;
+    float: right;
+    border: 3px solid rgba(255,255,255,0.2);
+    border-radius: 40px 0 0 40px;
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 1.8rem;
+    font-family: 'Open Sans', 'Helvetica Neue', Arial, Sans-Serif;
+    box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.5);
+}
+#gBig {font-size: 1.5rem; font-weight: 300;}
+
+
+@font-face {
+    font-family: 'frutigerregular';
+    src: url('../fonts/frutigr/frutigrr-webfont.eot');
+    src: url('../fonts/frutigr/frutigrr-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/frutigr/frutigrr-webfont.woff') format('woff'),
+         url('../fonts/frutigr/frutigrr-webfont.ttf') format('truetype'),
+         url('../fonts/frutigr/frutigrr-webfont.svg#frutigerregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'frutigerbold';
+    src: url('../fonts/frutigr/frutigrb-webfont.eot');
+    src: url('../fonts/frutigr/frutigrb-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/frutigr/frutigrb-webfont.woff') format('woff'),
+         url('../fonts/frutigr/frutigrb-webfont.ttf') format('truetype'),
+         url('../fonts/frutigr/frutigrb-webfont.svg#frutigerbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+/*------ jumboImg --------
+-------------------------*/
+
+.section1 {
+    width: 640px;
+    height: 490px;
+    margin: auto;
+    padding: 110px 0;
+    /*background: #000;*/
+}
+
+.red {
+    color: #cf1225;
+}
+
+.about {
+    color: #e16c6c;
+}
+
+#jumboImg {
+    background: url("../img/jumbo-image-big-v01.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: #000;
+    width: 100%;
+    height: 490px;
+    position: relative;
+}
+
+#jumboImg h1 {
+	margin-top: 2rem;
+	font-family: 'frutigerbold';
+	font-size: 4.5rem;
+	font-weight: 400;
+	color: #fff;
+}
+
+#jumboImg h2  {
+	margin-top: 0.8rem;
+	font-family: 'Open Sans';
+	font-size: 1.7rem;
+	font-weight: 600;
+	color: #fff;
+}
+
+.counter {
+	font-family: 'frutigerbold';
+	color: #fff;
+	margin: 40px 0;
+    padding: 0;
+    width: 100px;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+
+}
+
+.countNum {
+    font-size: 4.5rem;
+    height: 40px;
+    margin-left: 0;
+   
+}
+
+.countLeg {
+    font-size: 1.2rem;
+    
+}
+
+.col-lg-2 {
+    width: 20%;
+}
+
+
+
+
+@media screen and (max-device-width: 480px) {
+    .section1 {width: 290px; padding: 80px 0;}
+    .countNum {font-size: 2.2rem; height: 18px;}
+    .countLeg {font-size: 0.7rem;}
+    #jumboImg {height: 360px;}
+    #jumboImg h1 {font-size: 3rem;}
+    #jumboImg h2 {font-size: 1.3rem;}
+    .counter {margin: 20px 0; width: 60px;}  
+    .col-lg-2 {width: 18%;}
+  
+}
+
+.btn-info {
+    background-color: #cf1225;
+    border: 1px solid #cf1225;
+    color: #FFFFFF2
+}
+.btn-info:hover {
+    background-color: #ff1225;
+    border: 1px solid #cf1225;
+    box-shadow: 0px 0px 5px 0 rgba(0,0,0, 1) inset;
+    -webkit-box-shadow: 0px 0px 5px 0 rgba(0,0,0, 1) inset;
+    -moz-box-shadow: 0px 0px 5px 0 rgba(0,0,0, 1) inset;
+    -o-box-shadow: 0px 0px 5px 0 rgba(0,0,0, 1) inset;
+
+}
+.btn {
+    font-size: 1.6rem;
+}
+
+.uppercase {
+    text-transform: uppercase;
+    
+}
+
+.fa {color: #e16c6c;}
+
+.feat {
+    text-transform:uppercase;
+    display:table-cell;
+    vertical-align:middle;
+}
+
+.feat .aboutNum {
+    font-family:'Open Sans'; 
+    font-size:5.5rem;
+    line-height:55px;
+    color: #8d60bb;
+}
+.feat p {
+    font-size:13px;
+    font-family:'Open Sans';
+    letter-spacing:1px;
+}
+
+.feat i {
+    vertical-align:middle;
+    margin:10px 0 5px 0;
+}
+
+.lead {
+    font-family:'Roboto', sans-serif;
+    font-size:1.4rem;
+    letter-spacing:1px;
+    color: #999;
+}
+
+.thumbnail {
+    border: 1px solid #fff;
+}
+
+.container-fluid {
+	background: transparent;
+
+}
+
+.footer1 {
+    background: #eee;
+    min-height: 50px;
+}
+
+.line {
+    color: #666;
+    font-family:'Roboto', sans-serif;
+    font-size:1rem;
+    margin-top: 10px;
+    line-height: 2rem;
+}
+
+
