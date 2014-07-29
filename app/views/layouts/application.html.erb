@@ -81,10 +81,11 @@ a:active {
                  margin-top: -30px;
 
                }
-      .bgdark{
+ .bgdark{
         padding-top: 30px;
         padding-bottom: 30px;
-        background: #24202B url("/assets/bgimg.jpg");
+        background: #24202B;
+        background-image: url(<%= asset_path 'bgimg.jpg' %>);
         background-repeat: repeat-x;
         color: #CCCCCC;
 
