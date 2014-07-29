@@ -1,12 +1,15 @@
-<div class="row-fluid">
+ <div class="row-fluid ">
+    <div class="span12 padding-page">
+
 
 <div class="span2">
 <ul class="nav nav-pills nav-stacked">
   <li class="nav-header">Admin Menu</li>
-  <li <% if current_page?(admin_index_path) %>class="active"<% end %>><%= link_to "User Manager List", admin_index_path %></li>
-   <li <% if current_page?(admin_videos_path) %>class="active"<% end %>><%= link_to "Set Embeded Video", admin_videos_path %></li>
-
+     <li <% if current_page?(admin_index_path) %>class="active"<% end %>><%= link_to "User Manager List", admin_index_path %></li>
+     <li <% if current_page?(admin_videos_path) and @video.id == 1 %>class="active"<% end %>><%= link_to "Set Embeded Video", admin_videos_path(:id => 1) %></li>
+     <li <% if current_page?(admin_videos_path) and @video.id == 2  %>class="active"<% end %>><%= link_to "Set Embeded Audio", admin_videos_path(:id => 2) %></li>
 </ul>
+
 </div>
 
 
@@ -14,27 +17,42 @@
 <div class="span9 offset1">
 
 
+   <%= form_for(@video) do |f| %>
+  <% if @video.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@video.errors.count, "error") %> prohibited this task from being saved:</h2>
+      <ul>
+      <% @video.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+  <h3>Embeded Settings</h3>
+  <div class="video-edit">
+    <%= @video.code.html_safe %> <br />
+  </div>
+  <br />
+      <div class="field">
+       <%= f.text_area :code, :class => "textarea-code", disabled: true %>
+  </div>
+
+<% end %>
+
 <div class="text-left">
-  <h3>Video Settings</h3>
+ <%= link_to "Edit Embed Video", "/admin/video_edit/#{@video.id}", { :class=>"btn btn-info btn-large" } %>
 </div>
-This video will be embeded on dashboard page. Click on edit botton to change your code.
-<hr>
-
-<%= @video.code.html_safe %> <br />
-<P>
-  <h4><%= @video.name %></h4>
-</P>
-    <p>
-
-    <blockquote><%= @video.description %></blockquote>
-
-    </p>  <br />
-
-      <%= link_to "Edit Embed Video", "/admin/video_edit/#{@video.id}", { :class=>"btn btn-info btn-large" } %>
 
 
               </tbody>
             </table>
+
+
           </div>
         </div>
+
+
+
 

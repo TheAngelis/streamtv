@@ -13,7 +13,7 @@ end
 
 
   def index
-    redirect_to :controller=>'admin', :action => 'videos'
+    redirect_to :controller=>'admin', :action => 'index'
   end
 
   def show
@@ -40,7 +40,7 @@ end
       @video = Video.find(params[:id])
       respond_to do |format|
       if @video.update_attributes(video_params)
-        format.html { redirect_to @video, notice: 'Video was successfully updated.' }
+        format.html { redirect_to '/admin/', notice: 'Video was successfully updated.' }
        # format.json { render :show, status: :ok, location: @task }
       else
         format.html { render :index }

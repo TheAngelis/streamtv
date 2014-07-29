@@ -1,42 +1,56 @@
-<div class="text-left">
+<!-- <div class="text-left">
   <% if current_user.sign_in_count == "1" %>
   <p class="lead"><strong>Welcome to Stream TV!</strong> This is your first times here. Enjoy! </p>
 <% else %>
   <p class="lead"><strong>Welcome back!</strong> You've been here <%= current_user.sign_in_count %> times. </p>
 <% end %>
-</div>
+</div> /-->
 
-<div class="container-fluid bgdark">
-  <div class="row-fluid">
+
+
+  <div class="row-fluid bgdark uplinepage">
+    <div class="span12 padding-page">
+
+
     <div class="span8">
 
       <%= @video.code.html_safe  %>
 
     </div>
-    <div class="span4">
-      <!--Body content-->
+
+   <div class="span4">
+
+
+     <!--Body content-->
       <h3 class="titlevideo"><%= @video.name  %>
 </h3>
       <p>
          <%= @video.description  %>
       </p>
-      <p>
-        <h5>Assita ao lado!</h5>
-      </p>
-
       <br />
 
-      <p>
-        <strong>Client:</strong> Nike<br />
-        <strong>VFX Prodution:</strong> Passion Picture <br />
-        <strong>Year:</strong> 2014
-      </p>
+      <h4 class="titlevideo">Tipo de Transmissão</h4>
 
-    </div>
+      <div class="btn-group">
+        <% if current_page?(dashboard_index_path)  %>
+           <%= link_to "Video e Audio", dashboard_index_path, { :class=>"btn btn-small active btn-danger" } %>
+           <%= link_to "Só Audio", dashboard_audio_path, { :class=>"btn btn-small" } %>
+         <% end %>
+
+         <% if current_page?(dashboard_audio_path)  %>
+           <%= link_to "Video e Audio", dashboard_index_path, { :class=>"btn btn-small" } %>
+           <%= link_to "Só Audio", dashboard_audio_path, { :class=>"btn btn-small active btn-danger" } %>
+        <% end %>
+
+  </div>
 
 
   </div>
 </div>
+
+
+  </div>
+
 
 
 

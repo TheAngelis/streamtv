@@ -13,18 +13,17 @@ end
 
 
   def index
-
+    render('index')
   end
 
   def videos
-     @video = Video.find(1)
+     @video = Video.find(params[:id])
   end
 
   def video_edit
       @video = Video.find(params[:id])
 
   end
-
 
 
 

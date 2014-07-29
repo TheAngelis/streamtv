@@ -1,0 +1,56 @@
+<!-- <div class="text-left">
+  <% if current_user.sign_in_count == "1" %>
+  <p class="lead"><strong>Welcome to Stream TV!</strong> This is your first times here. Enjoy! </p>
+<% else %>
+  <p class="lead"><strong>Welcome back!</strong> You've been here <%= current_user.sign_in_count %> times. </p>
+<% end %>
+</div> /-->
+
+
+
+  <div class="row-fluid bgdark uplinepage">
+    <div class="span12 padding-page">
+
+
+    <div class="span8">
+
+ <%= @video.code.html_safe  %>
+    </div>
+
+   <div class="span4">
+
+
+    <!--Body content-->
+      <h3 class="titlevideo"><%= @video.name  %>
+</h3>
+      <p>
+         <%= @video.description  %>
+      </p>
+      <br />
+
+      <h4 class="titlevideo">Tipo de Transmissão</h4>
+
+      <div class="btn-group">
+        <% if current_page?(dashboard_index_path)  %>
+           <%= link_to "Video e Audio", dashboard_index_path, { :class=>"btn btn-small active btn-danger" } %>
+           <%= link_to "Só Audio", dashboard_audio_path, { :class=>"btn btn-small" } %>
+         <% end %>
+
+         <% if current_page?(dashboard_audio_path)  %>
+           <%= link_to "Video e Audio", dashboard_index_path, { :class=>"btn btn-small" } %>
+           <%= link_to "Só Audio", dashboard_audio_path, { :class=>"btn btn-small active btn-danger" } %>
+        <% end %>
+
+  </div>
+
+
+  </div>
+</div>
+
+
+  </div>
+
+
+
+
+

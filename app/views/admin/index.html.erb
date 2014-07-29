@@ -1,12 +1,13 @@
-<div class="row-fluid">
+<div class="row-fluid  padding-page">
 
 <div class="span2">
 <ul class="nav nav-pills nav-stacked">
   <li class="nav-header">Admin Menu</li>
-  <li <% if current_page?(admin_index_path) %>class="active"<% end %>><%= link_to "User Manager List", admin_index_path %></li>
-   <li <% if current_page?(admin_videos_path) %>class="active"<% end %>><%= link_to "Set Embeded Video", admin_videos_path %></li>
-
+     <li <% if current_page?(admin_index_path) %>class="active"<% end %>><%= link_to "User Manager List", admin_index_path %></li>
+     <li <% if current_page?(admin_videos_path) and @video.id == 1 %>class="active"<% end %>><%= link_to "Set Embeded Video", admin_videos_path(:id => 1) %></li>
+     <li <% if current_page?(admin_videos_path) and @video.id == 2  %>class="active"<% end %>><%= link_to "Set Embeded Audio", admin_videos_path(:id => 2) %></li>
 </ul>
+
 </div>
 
 

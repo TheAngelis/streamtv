@@ -1,17 +1,27 @@
 Rails.application.routes.draw do
 
+
+  get "dashboard/audio"
+  match '/dashboard/audio',     to: 'dashboard#audio',       via: [:get, :post]
+
   get "admin/videos"
   match '/admin/video_edit/:id',     to: 'admin#video_edit',       via: [:get, :post]
+  get "admin/videos"
+  match '/admin/videos/:id',     to: 'admin#videos',       via: [:get, :post]
+
+  #get "admin/audios"
+  #match '/admin/video_edit/:id',     to: 'admin#audio_edit',       via: [:get, :post]
+
+
   resources :admin
   devise_for :users
   resources :dashboard
+
   resources :videos
   root to: "home#index"
 
   match '/users/:id',     to: 'users#show',       via: [:get, :post]
-
-
-
+  #match ':controller(/:action(/:id))', :via => :get
 
 
 
