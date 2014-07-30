@@ -75,9 +75,9 @@ setInterval(function() {
   seconds = padZero(parseInt(trackTime));
   //write date
 
-  countdown[0].innerHTML = months;
-  countdown[1].innerHTML = days;
-  countdown[2].innerHTML = hours;
-  countdown[3].innerHTML = minutes;
-  countdown[4].innerHTML = seconds;
+  //countdown[0].innerHTML = months;
+  countdown[0].innerHTML = days;
+  countdown[1].innerHTML = hours;
+  countdown[2].innerHTML = minutes;
+  countdown[3].innerHTML = seconds;
 }, 1000)
