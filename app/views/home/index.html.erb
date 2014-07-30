@@ -6,13 +6,44 @@
 
         <div class="text-center ">
              <%= link_to(image_tag("home.png"), root_path) %>
+             <br /><br />
+
+ <div class="container-fluid">
+      <section id="countdown" class="text-center">
+
+  <div class="months date">
+    <span class="date-amount">MES</span>
+    <span class="integer">00</span>
+  </div>
+  <div class="days date">
+    <span class="date-amount">DIAS</span>
+    <span class="integer">00</span>
+  </div>
+  <div class="hours date">
+    <span class="date-amount">HORAS</span>
+    <span class="integer">00</span>
+  </div>
+  <div class="minutes date">
+    <span class="date-amount">MINUTOS</span>
+    <span class="integer">00</span>
+  </div>
+  <div class="seconds date">
+    <span class="date-amount">SEGUNDOS</span>
+    <span class="integer">00</span>
+  </div>
+</section>
+
+</div>
 
 
-             <br><br><br>
-              <p>
-                <%= link_to "Fazer Login", new_user_session_path, { :class=>"btn btn-large" } %> ou <%= link_to "Cadastre-se", new_user_registration_path, { :class=>"btn btn-large" } %>
 
-              </p>
+
+
+             <br><br>
+              <div class="text-center">
+                <%= link_to "Fazer Login", new_user_session_path, { :class=>"btn btn-large btn-danger btn-cor" } %> ou <%= link_to "Cadastre-se", new_user_registration_path, { :class=>"btn btn-large btn-danger btn-cor" } %>
+
+              </div>
         </div>
 
 

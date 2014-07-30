@@ -11,7 +11,7 @@
   <link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
   <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 
-    <script src="http://code.jquery.com/jquery.js"></script>
+  <script src="http://code.jquery.com/jquery-2.1.1.js"></script>
   <script src="js/bootstrap.min.js"></script>
 
     <style type="text/css">
@@ -49,7 +49,7 @@ html {
     height: 80px;
     padding-top: 10px;
     padding-left: 3px;
-    background: rgba(255,0,0,0.5);;
+    background: rgba(255,0,0,0.5);
     float: right;
     border: 3px solid rgba(255,255,255,0.2);
     border-radius: 40px 0 0 40px;
@@ -74,7 +74,7 @@ html {
   background-color: #4D3270;
   color: #FFF;
 
-// This changes the color of the active
+
 }
 .navbar-default .nav-pills>li.active>a:hover {
   background-color: #4D3270;
@@ -101,7 +101,6 @@ html {
     background-color: #4D3270;
 }
 
-// This changes the color of the hovered pill
 
 
 @media screen and (max-device-width: 480px) {
@@ -109,7 +108,9 @@ html {
     .countNum {font-size: 2.2rem; height: 18px;}
     .countLeg {font-size: 0.7rem;}
     #jumboImg {height: 360px;}
-       .counter {margin: 20px 0; width: 60px;}
+    #jumboImg h1 {font-size: 3rem;}
+    #jumboImg h2 {font-size: 1.3rem;}
+    .counter {margin: 20px 0; width: 60px;}
     .col-lg-2 {width: 18%;}
 
 }
@@ -213,7 +214,17 @@ a:active {
 	text-decoration: none
 	}
 
-
+.btn-cor a:link, a:visited {
+  text-decoration: none;
+  color: #FFF;
+	}
+.btn-cor a:hover {
+	text-decoration: none;
+	color: #FFF;
+	}
+.btn-cor a:active {
+	text-decoration: none
+	}
 
       #beta {
        margin: 10px;
@@ -314,6 +325,47 @@ a:active {
         }
 
 
+ #countdown{
+  max-width:700px;
+  margin: auto;
+  padding-left: 65px;
+  padding-right: 15px;
+
+}
+
+
+
+  .date {
+    width: 17%;
+    margin:0.4%;
+    padding:1%;
+    border-radius:23%;
+    display:block;
+    float:left;
+    border: 2px dotted rgba(255,255,255,0.2);
+    border-top: 4px solid rgba(255,255,255,0.6);
+     border-bottom: 4px solid rgba(255,255,255,0.6);
+    font-family: 'Pathway Gothic One', arial, sans-serif;
+    text-align:center;
+    color:#FFF;
+
+   background-color: rgba(255,255,255,0.03);
+  }
+
+  .date-amount, .integer {
+    display:block;
+  }
+
+  .integer {
+    font-size:3.5em;
+  }
+
+  .date-amount {
+    font-size:1.2em;
+    text-transform:uppercase;
+    color:darken(#16a085,10%);
+  }
+
 
     </style>
 </head>
@@ -336,8 +388,9 @@ a:active {
 
 					    </button>
 
-						<!-- Logo -->
-                      <%= link_to(image_tag("logo.png"), root_path, { :class=>"navbar-brand" }) %>
+
+                        <!-- Logo -->
+                      <%= link_to(image_tag("logo_bkp.png"), root_path, { :class=>"navbar-brand" }) %>
 
 					</div>
 
@@ -369,7 +422,7 @@ a:active {
 
         <% else %>
           <li class="<% if current_page?(root_path) %> active<% end %>"><%= link_to "Home", root_path %></li>
-          <li class="<% if current_page?(new_user_registration_path) %> active<% end %>"><%= link_to "Cadastrar-se", new_user_registration_path %></li>
+          <li class="<% if current_page?(new_user_registration_path) %> active<% end %>"><%= link_to "Cadastre-se", new_user_registration_path %></li>
           <li class="<% if current_page?(new_user_session_path) %> active<% end %>"><%= link_to "Login", new_user_session_path %></li>
         <% end %>
       </ul>
