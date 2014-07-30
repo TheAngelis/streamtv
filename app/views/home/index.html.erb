@@ -1,21 +1,67 @@
 
-  <div class="row-fluid bgdark uplinepage">
-<div class="span12 ">
+<div class="row-fluid bgdark ">
+    <div class="span12 ">
 
 
 
-<div class="text-center ">
-   <%= link_to(image_tag("home.png"), root_path) %>
+        <div class="text-center ">
+             <%= link_to(image_tag("home.png"), root_path) %>
 
 
-   <br><br><br>
-  <p>
-      <%= link_to "Sign in", new_user_session_path, { :class=>"btn btn-large" } %> or <%= link_to "Register", new_user_registration_path %>
+             <br><br><br>
+              <p>
+                <%= link_to "Fazer Login", new_user_session_path, { :class=>"btn btn-large" } %> ou <%= link_to "Cadastre-se", new_user_registration_path, { :class=>"btn btn-large" } %>
 
-  </p>
+              </p>
+        </div>
+
+
+    </div>
 </div>
 
 
-  </div>
-</div>
+<!-- Section About the Event -->
+			<section>
+				<div class="container">
+					<div class="row">
+						<div class="thumbnail col-lg-10 col-lg-offset-1 text-center">
+							<h2 id="about"class="about">Sobre o Evento</h2>
+							<p class="lead">Lorem ipsum dolor sit amet, quo an doctus vidisse ullamcorper. Libris detracto hendrerit eos ex. Per ne mucius accusam mandamus, an qui probatus intellegebat. An sumo docendi pro, eam cu agam numquam sententiae. Eum cu erroribus hendrerit, eirmod eloquentiam pro in, in veri cetero periculis per. His id errem volumus.</p>
+						</div><!-- End Column -->
+
+						<div class="col-lg-8 col-lg-offset-2 text-center">
+
+							<!-- Number of Participants -->
+							<div class="thumbnail feat col-xs-6 col-md-3 col-lg-3">
+								<p class="aboutNum">100</p>
+								<i class="fa fa-users fa-2x"></i>
+								<p>Participantes</p>
+							</div>
+
+							<!-- Event Duration -->
+							<div class="thumbnail feat col-xs-6 col-md-3 col-lg-3">
+								<p class="aboutNum">60</p>
+								<i class="fa fa-clock-o fa-2x"></i>
+								<p>Minutos</p>
+							</div>
+
+							<!-- Sessions -->
+							<div class="thumbnail feat col-xs-6 col-md-3 col-lg-3">
+								<p class="aboutNum">1</p>
+								<i class="fa fa-power-off fa-2x"></i>
+								<p>Sessões</p>
+							</div>
+
+							<!-- Speakers -->
+							<div class="thumbnail feat col-xs-6 col-md-3 col-lg-3">
+								<p class="aboutNum">1</p>
+								<i class="fa fa-microphone fa-2x"></i>
+								<p>Palestrantes</p>
+							</div>
+						</div>
+
+
+					</div><!-- End Row -->
+				</div>
+			</section>
 

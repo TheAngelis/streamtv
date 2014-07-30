@@ -1,12 +1,19 @@
-<h2>Forgot your password?</h2>
+<br /><br />
+<div class="container">
 
-<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+
+<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }, :html => {:class => "form-signin"}
+) do |f| %>
   <%= devise_error_messages! %>
+  <h3>Forgot your password?</h3>
 
+  <br />
   <div><%= f.label :email %><br />
-  <%= f.email_field :email, autofocus: true %></div>
-
-  <div><%= f.submit "Send me reset password instructions" %></div>
+  <%= f.email_field :email, autofocus: true, :class => "input-block-level"  %></div>
+<br />
+  <div><%= f.submit "Send me reset password instructions", { :class=>"btn btn-large btn-primary" }  %></div>
 <% end %>
 
 <%= render "devise/shared/links" %>
+
+</div>

@@ -2,22 +2,183 @@
 <html>
 <head>
   <title>Streamsite</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
-  <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
-  <script src="http://code.jquery.com/jquery.js"></script>
+
+  <link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+  <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <script src="http://code.jquery.com/jquery.js"></script>
   <script src="js/bootstrap.min.js"></script>
 
     <style type="text/css">
-      body {
+
+html {
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizelegibility;
+}
+.navbar-brand-full img {
+    width:269px;
+}
+.navbar-brand img {
+  width:150px;
+
+
+  }
+
+.nav{
+  padding-top: 5px;
+
+        }
+
+
+ .lead {
+    /*font-family:'Roboto', sans-serif;*/
+    font-size:1.7rem;
+   /* letter-spacing:1px;*/
+    color: #333;
+}
+#sizer {
+    position: fixed;
+    top: 60px;
+    right: -5px;
+    width: 100px;
+    height: 80px;
+    padding-top: 10px;
+    padding-left: 3px;
+    background: rgba(255,0,0,0.5);;
+    float: right;
+    border: 3px solid rgba(255,255,255,0.2);
+    border-radius: 40px 0 0 40px;
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+    /*font-size: 1.8rem;*/
+    /*font-family: 'Open Sans', 'Helvetica Neue', Arial, Sans-Serif;*/
+    box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.5);
+  }
+
+.navbar-custom {
+    background-color:#FFF;
+    color:#ffffff;
+    border-radius:0;
+    padding-bottom: 8px;
+    padding-top: 10px;
+
+  }
+
+.navbar-default .nav-pills > .active > a, .nav-pills > .active > a:hover {
+  background-color: #4D3270;
+  color: #FFF;
+
+// This changes the color of the active
+}
+.navbar-default .nav-pills>li.active>a:hover {
+  background-color: #4D3270;
+  color: #FFF;
+
+}
+
+/* Menu pill vertical */
+.nav-stacked>li.active>a:hover {
+  background-color: #4D3270;
+  color: #FFF;
+
+}
+
+.nav-stacked > .active > a, .nav-stacked > .active > a:hover {
+  background-color: #4D3270 !important;
+  color: #FFF;
+}
+/* Menu pill vertical */
+
+
+
+.navbar-default .nav-pills>li.active> a:focus{
+    background-color: #4D3270;
+}
+
+// This changes the color of the hovered pill
+
+
+@media screen and (max-device-width: 480px) {
+    .section1 {width: 290px; padding: 80px 0;}
+    .countNum {font-size: 2.2rem; height: 18px;}
+    .countLeg {font-size: 0.7rem;}
+    #jumboImg {height: 360px;}
+       .counter {margin: 20px 0; width: 60px;}
+    .col-lg-2 {width: 18%;}
+
+}
+
+.countNum {
+    font-size: 4.5rem;
+    height: 40px;
+    margin-left: 0;
+
+  }
+
+  .fa {color: #CC0033;}
+
+.feat {
+    text-transform:uppercase;
+    display:table-cell;
+    vertical-align:middle;
+}
+
+.feat .aboutNum {
+    /*font-family:'Open Sans';*/
+    font-size:5.5rem;
+    line-height:55px;
+    color: #4D3270;
+}
+.feat p {
+    font-size:13px;
+      /*font-family:'Open Sans';*/
+    letter-spacing:1px;
+}
+
+.feat i {
+    vertical-align:middle;
+    margin:10px 0 5px 0;
+}
+
+.container-fluid {
+	background: transparent;
+
+}
+
+.col-lg-2 {
+    width: 20%;
+}
+
+.section1 {
+    width: 640px;
+    height: 490px;
+    margin: auto;
+    padding: 110px 0;
+    /*background: #000;*/
+}
+.thumbnail {
+    border: 0 none;
+    box-shadow: none;
+    background: #fff;
+}
+.red {
+    color: #cf1225;
+}
+
+
+body {
         padding-top: 20px;
         padding-bottom: 20px;
-        background-color: #FcFcFc;
+        background-color: #FFF;
+          }
 
-      }
+
 .container-fluid {
      padding-right: 0;
      padding-left: 0;
@@ -51,15 +212,6 @@ a:hover {
 a:active {
 	text-decoration: none
 	}
-
-  .nav-pills > .active > a, .nav-pills > .active > a:hover {
-    background-color: #4D3270;
-// This changes the color of the active
-}
-.nav-pills>li.active>a:hover {
-    background-color: #4D3270;
-}
-// This changes the color of the hovered pill
 
 
 
@@ -162,6 +314,7 @@ a:active {
         }
 
 
+
     </style>
 </head>
 <body>
@@ -169,9 +322,30 @@ a:active {
     <div class="row-fluid">
 
 
-         <%= link_to(image_tag("logo.png"), root_path, { :class=>"titlevideo" }) %>
+<!-- Barra de Navegacao -->
+			<nav class="navbar navbar-default navbar-fixed-top padding-page navbar-custom" role="navigation">
+				<div class="container">
 
-           <ul class="nav nav-pills pull-right">
+					<!-- Navbar Mobile -->
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapse">
+					        <span class="sr-only">Toggle navigation</span>
+					        <span class="icon-bar"></span>
+					        <span class="icon-bar"></span>
+					        <span class="icon-bar"></span>
+
+					    </button>
+
+						<!-- Logo -->
+                      <%= link_to(image_tag("logo.png"), root_path, { :class=>"navbar-brand" }) %>
+
+					</div>
+
+
+			 		<!-- Navbar Default -->
+				    <div class="collapse navbar-collapse" id="collapse">
+				    	<!-- Menus Top-->
+				    	<ul class="nav nav-pills pull-right">
 
         <% if user_signed_in? %>
 
@@ -184,33 +358,42 @@ a:active {
           <% end %>
 
           <!-- DASHBOARD -->
-          <li class="<% if current_page?(dashboard_index_path) %> active<% end %><% if current_page?(dashboard_audio_path) %> active<% end %>"><%= link_to "Dashboard", root_path %></li>
+          <li class="<% if current_page?(dashboard_index_path) %> active<% end %><% if current_page?(dashboard_audio_path) %> active<% end %>"><%= link_to "Transmissão", root_path %></li>
 
           <!-- MY ACCOUNT -->
-          <li class="<% if current_page?(edit_user_registration_path) %> active<% end %>"><%= link_to "My Account", edit_user_registration_path %></li>
+          <li class="<% if current_page?(edit_user_registration_path) %> active<% end %>"><%= link_to "Minha Conta", edit_user_registration_path %></li>
 
           <!-- SIGN OUT -->
-          <li> <%= link_to "Sign out", destroy_user_session_path, :method => :delete %></li>
+          <li> <%= link_to "Sair", destroy_user_session_path, :method => :delete %></li>
 
 
         <% else %>
-          <li class="active"><%= link_to "Home", root_path %></li>
-          <li><%= link_to "Register", new_user_registration_path %></li>
-          <li><%= link_to "Sign in", new_user_session_path %></li>
+          <li class="<% if current_page?(root_path) %> active<% end %>"><%= link_to "Home", root_path %></li>
+          <li class="<% if current_page?(new_user_registration_path) %> active<% end %>"><%= link_to "Cadastrar-se", new_user_registration_path %></li>
+          <li class="<% if current_page?(new_user_session_path) %> active<% end %>"><%= link_to "Login", new_user_session_path %></li>
         <% end %>
       </ul>
-    </div>
+				    </div>
+
+			    </div>
+			</nav>
+
+
+               </div>
   </div>
 
-      <hr>
+  <br />
 
 
   <div class="container-fluid">
 
-
     <%= yield %>
 
   </div>
-  <hr>
+
+
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+
 </body>
 </html>
+
