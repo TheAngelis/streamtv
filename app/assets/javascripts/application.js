@@ -46,7 +46,7 @@ $(window).on('resize load',adjustIframes);
 
 
 // declare weddingdate and data variables
-var weddingDate = new Date("Jul 31, 2014 15:00:00"),
+var weddingDate = new Date("Jul 31, 2014 16:00:00"),
     months, days, minutes, seconds,
     //declare Dom position
     countdown = document.getElementsByClassName("integer");
